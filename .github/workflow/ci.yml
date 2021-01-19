@@ -1,0 +1,14 @@
+name: GITHUB ACTION TEST
+on: push
+
+jobs:
+  my-job:
+    name: My Job
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print a greeting
+      env:
+        MY_VAR: Hi there! My name is
+        NAME: JACK
+      run: |
+        echo $MY_VAR $NAME.
